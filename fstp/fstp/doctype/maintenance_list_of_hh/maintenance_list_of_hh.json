@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-18 15:41:02.875681",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "house_owner",
+  "phone_no",
+  "address",
+  "status_of_stsp",
+  "last_emptying_date",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "house_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "House Owner",
+   "options": "Household Details"
+  },
+  {
+   "fetch_from": "house_owner.phone_number",
+   "fieldname": "phone_no",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone no",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "house_owner.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_of_stsp",
+   "fieldtype": "Select",
+   "label": "Status of Visit",
+   "options": "pending\nunavailable\nunwilling\ncompleted"
+  },
+  {
+   "fetch_from": "house_owner.last_emptying_date",
+   "fieldname": "last_emptying_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Last Emptying Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-18 17:52:25.777724",
+ "modified_by": "Administrator",
+ "module": "Fstp",
+ "name": "Maintenance List of HH",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

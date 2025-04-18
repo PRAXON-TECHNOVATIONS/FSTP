@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2025-04-17 12:11:59.834567",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_of_households_for_fstp_section",
+  "name_of_owner",
+  "phone_number",
+  "number_of_persons",
+  "septic_tanksoak_pit",
+  "column_break_wowz",
+  "address",
+  "volume_of_septic_tank__soak_pit_section",
+  "measurement_unit",
+  "height",
+  "column_break_poci",
+  "length",
+  "breadth",
+  "section_break_yavx",
+  "construction_date",
+  "last_emptying_date",
+  "column_break_jhqq",
+  "sullage_disposal",
+  "any_chowkland_for_community_septic_tank"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_of_households_for_fstp_section",
+   "fieldtype": "Section Break",
+   "label": "Details of Households for FSTP"
+  },
+  {
+   "fieldname": "name_of_owner",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of Owner",
+   "reqd": 1
+  },
+  {
+   "default": "+91-",
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_persons",
+   "fieldtype": "Int",
+   "label": "Number of Persons"
+  },
+  {
+   "fieldname": "septic_tanksoak_pit",
+   "fieldtype": "Select",
+   "label": "Septic Tank/Soak Pit",
+   "options": "Soak Pit\nSeptic Tank"
+  },
+  {
+   "fieldname": "column_break_wowz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "volume_of_septic_tank__soak_pit_section",
+   "fieldtype": "Section Break",
+   "label": "Volume of Septic Tank / Soak Pit"
+  },
+  {
+   "fieldname": "measurement_unit",
+   "fieldtype": "Select",
+   "label": "Measurement Unit",
+   "options": "Feet\nMeters"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Float",
+   "label": "Height"
+  },
+  {
+   "fieldname": "column_break_poci",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Float",
+   "label": "Length"
+  },
+  {
+   "fieldname": "breadth",
+   "fieldtype": "Float",
+   "label": "Breadth"
+  },
+  {
+   "fieldname": "section_break_yavx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "construction_date",
+   "fieldtype": "Data",
+   "label": "Construction Date"
+  },
+  {
+   "fieldname": "last_emptying_date",
+   "fieldtype": "Date",
+   "label": "Last Emptying Date"
+  },
+  {
+   "fieldname": "column_break_jhqq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sullage_disposal",
+   "fieldtype": "Select",
+   "label": "Sullage Disposal",
+   "options": "To Drain\nTo Tank"
+  },
+  {
+   "fieldname": "any_chowkland_for_community_septic_tank",
+   "fieldtype": "Data",
+   "label": "Any Chowk/Land for community septic tank"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-18 17:51:39.076738",
+ "modified_by": "Administrator",
+ "module": "Fstp",
+ "name": "Household Details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
