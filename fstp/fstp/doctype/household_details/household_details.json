@@ -2,6 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
+ "autoname": "format:HD-{##}-{phone_number}",
  "creation": "2025-04-17 12:11:59.834567",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -132,10 +133,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-18 17:51:39.076738",
+ "modified": "2025-04-23 16:25:46.582289",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Household Details",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
