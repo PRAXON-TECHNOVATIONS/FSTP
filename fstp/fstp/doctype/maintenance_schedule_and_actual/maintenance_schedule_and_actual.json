@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "MS-MM-##",
+ "autoname": "MS-MM-.####",
  "creation": "2025-04-23 16:33:11.144941",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,25 +12,28 @@
  ],
  "fields": [
   {
+   "default": "Today",
    "fieldname": "posting_date",
    "fieldtype": "Date",
    "label": "Posting Date"
   },
   {
    "fieldname": "company",
-   "fieldtype": "Data",
-   "label": "Company"
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "set_only_once": 1
   },
   {
    "fieldname": "table_zres",
    "fieldtype": "Table",
-   "options": "Issue Registered"
+   "options": "Maintenance Schedule Child"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-23 16:41:08.565449",
+ "modified": "2025-04-29 14:28:06.903892",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule And Actual",

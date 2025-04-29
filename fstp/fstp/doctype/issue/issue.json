@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:IS-{MM}-{YYYY}-{###}",
+ "creation": "2025-04-26 14:14:20.815681",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "issue_subject",
+  "status",
+  "column_break_fwpq",
+  "priority",
+  "household",
+  "section_break_ilbh",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nClosed\nResolved\nOn Hold"
+  },
+  {
+   "fieldname": "column_break_fwpq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh"
+  },
+  {
+   "fieldname": "household",
+   "fieldtype": "Link",
+   "label": "Household",
+   "options": "Household Details"
+  },
+  {
+   "fieldname": "section_break_ilbh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "issue_subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Issue Subject",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-29 16:03:06.220206",
+ "modified_by": "Administrator",
+ "module": "Fstp",
+ "name": "Issue",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "issue_subject",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
