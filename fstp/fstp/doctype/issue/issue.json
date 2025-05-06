@@ -8,6 +8,7 @@
  "field_order": [
   "issue_subject",
   "status",
+  "remarks",
   "column_break_fwpq",
   "priority",
   "household",
@@ -19,7 +20,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nClosed\nResolved\nOn Hold"
+   "options": "Open\nClosed\nResolved\nOn Hold",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_fwpq",
@@ -35,7 +37,8 @@
    "fieldname": "household",
    "fieldtype": "Link",
    "label": "Household",
-   "options": "Household Details"
+   "options": "Household Details",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_ilbh",
@@ -52,12 +55,18 @@
    "in_list_view": 1,
    "label": "Issue Subject",
    "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.status == 'On Hold'",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-29 16:03:06.220206",
+ "modified": "2025-05-06 14:28:45.617642",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Issue",
@@ -81,5 +90,22 @@
  "search_fields": "issue_subject",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Orange",
+   "title": "Open"
+  },
+  {
+   "color": "Gray",
+   "title": "Closed"
+  },
+  {
+   "color": "Green",
+   "title": "Resolved"
+  },
+  {
+   "color": "Blue",
+   "title": "On Hold"
+  }
+ ]
 }
