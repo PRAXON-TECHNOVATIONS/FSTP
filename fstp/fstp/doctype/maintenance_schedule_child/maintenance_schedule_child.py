@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class MaintenanceListofHH(Document):
+class MaintenanceScheduleChild(Document):
 	pass

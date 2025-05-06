@@ -1,33 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-04-18 15:55:04.288487",
+ "autoname": "field:company",
+ "creation": "2025-04-28 11:14:39.335003",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "maintenance_period_months",
-  "households_list"
+  "company"
  ],
  "fields": [
   {
-   "fieldname": "maintenance_period_months",
-   "fieldtype": "Datetime",
-   "label": "Maintenance Visit Date"
-  },
-  {
-   "fieldname": "households_list",
-   "fieldtype": "Table",
-   "label": "Households List",
-   "options": "Maintenance List of HH"
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-18 17:52:42.682607",
+ "modified": "2025-04-28 11:28:32.249386",
  "modified_by": "Administrator",
  "module": "Fstp",
- "name": "Maintenance Period",
+ "name": "Company",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
