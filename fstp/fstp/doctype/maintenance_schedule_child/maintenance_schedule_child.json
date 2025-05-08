@@ -6,23 +6,26 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "household_details_section",
   "household_name",
   "schedule_date",
   "actual_date",
-  "issue",
   "column_break_zllo",
   "status",
-  "phone_number",
   "maintenance_type",
+  "issue",
   "section_break_kzys",
+  "phone_number",
   "address"
  ],
  "fields": [
   {
+   "fetch_from": "household_name.schedule_date",
    "fieldname": "schedule_date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Schedule Date",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -35,10 +38,12 @@
   },
   {
    "allow_on_submit": 1,
+   "depends_on": "eval: doc.status === 'Completed'",
    "fieldname": "actual_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Actual Date"
+   "label": "Actual Date",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_zllo",
@@ -65,12 +70,13 @@
   },
   {
    "fieldname": "section_break_kzys",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Contact and Address"
   },
   {
    "fetch_from": "household_name.address",
    "fieldname": "address",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Address",
    "read_only": 1
@@ -79,7 +85,7 @@
    "fieldname": "maintenance_type",
    "fieldtype": "Select",
    "label": "Maintenance Type",
-   "options": "\nBreakdown\nSchedule",
+   "options": "Schedule\nBreakdown",
    "reqd": 1
   },
   {
@@ -88,19 +94,23 @@
    "fieldtype": "Link",
    "label": "Issue",
    "options": "Issue"
+  },
+  {
+   "fieldname": "household_details_section",
+   "fieldtype": "Section Break",
+   "label": "Household Details"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-05 17:27:38.021048",
+ "modified": "2025-05-08 16:55:04.170392",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule Child",
  "owner": "Administrator",
  "permissions": [],
- "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
