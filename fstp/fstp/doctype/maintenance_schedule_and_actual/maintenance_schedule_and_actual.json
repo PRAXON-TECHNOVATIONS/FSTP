@@ -7,10 +7,12 @@
  "engine": "InnoDB",
  "field_order": [
   "posting_date",
-  "schedule_date",
   "company",
-  "scheduling_table",
-  "amended_from"
+  "amended_from",
+  "column_break_qmvn",
+  "schedule_date",
+  "scheduled_details_section",
+  "scheduling_table"
  ],
  "fields": [
   {
@@ -47,13 +49,22 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "column_break_qmvn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scheduled_details_section",
+   "fieldtype": "Section Break",
+   "label": "Scheduled Details"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-08 16:13:07.352824",
+ "modified": "2025-05-09 15:55:42.572985",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule And Actual",
