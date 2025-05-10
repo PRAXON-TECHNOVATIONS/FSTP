@@ -148,6 +148,12 @@ doctype_js = {
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+    "Maintenance Schedule And Actual": {
+        "on_submit": "fstp.fstp.doctype.maintenance_schedule_and_actual.maintenance_schedule_and_actual.on_submit"
+    }
+}
+
 
 # Scheduled Tasks
 # ---------------

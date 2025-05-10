@@ -20,3 +20,11 @@ def get_households_by_date(schedule_date):
         fields=["name", "phone_number", "address", "schedule_date"]
     )
     return households
+
+def on_submit(doc, method):
+    for row in doc.scheduling_table:
+        if row.maintenance_type == "Breakdown" and row.status == "Completed" and row.issue:
+            issue = frappe.get_doc("Issue", row.issue)
+            issue.status = "Resolved"
+            issue.save()
+            frappe.db.commit()
