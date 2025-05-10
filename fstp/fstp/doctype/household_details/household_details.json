@@ -119,7 +119,7 @@
   },
   {
    "fieldname": "construction_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Construction Date"
   },
   {
@@ -161,7 +161,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-09 15:35:27.901453",
+ "modified": "2025-05-10 13:50:18.013570",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Household Details",

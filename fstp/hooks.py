@@ -44,6 +44,10 @@ app_license = "mit"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Household Details": "fstp/fstp/doctype/household_details/household_details.js"
+}
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -144,6 +148,12 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+    "Maintenance Schedule And Actual": {
+        "on_submit": "fstp.fstp.doctype.maintenance_schedule_and_actual.maintenance_schedule_and_actual.on_submit"
+    }
+}
+
 
 # Scheduled Tasks
 # ---------------
