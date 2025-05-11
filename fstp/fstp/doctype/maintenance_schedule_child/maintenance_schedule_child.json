@@ -6,25 +6,31 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "household_details_section",
   "household_name",
   "schedule_date",
   "actual_date",
-  "issue",
   "column_break_zllo",
   "status",
+  "sullage_disposal_to_draintank",
+  "maintenance_type",
+  "issue",
+  "section_break_kzys",
   "phone_number",
-  "address",
-  "sullage_disposal_to_draintank"
+  "address"
  ],
  "fields": [
   {
+   "fetch_from": "household_name.schedule_date",
    "fieldname": "schedule_date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Schedule Date",
-   "reqd": 1
+   "mandatory_depends_on": "eval: doc.maintenance_type === 'Schedule'",
+   "read_only": 1
   },
   {
+   "fetch_from": "issue.household",
    "fieldname": "household_name",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -34,10 +40,12 @@
   },
   {
    "allow_on_submit": 1,
+   "depends_on": "eval: doc.status === 'Completed'",
    "fieldname": "actual_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Actual Date"
+   "label": "Actual Date",
+   "mandatory_depends_on": "eval: doc.status === 'Completed'"
   },
   {
    "fieldname": "column_break_zllo",
@@ -64,12 +72,13 @@
   },
   {
    "fieldname": "section_break_kzys",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Contact and Address"
   },
   {
    "fetch_from": "household_name.address",
    "fieldname": "address",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Address",
    "read_only": 1
@@ -78,7 +87,7 @@
    "fieldname": "maintenance_type",
    "fieldtype": "Select",
    "label": "Maintenance Type",
-   "options": "\nBreakdown\nSchedule",
+   "options": "Schedule\nBreakdown",
    "reqd": 1
   },
   {
@@ -110,7 +119,6 @@
  "name": "Maintenance Schedule Child",
  "owner": "Administrator",
  "permissions": [],
- "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

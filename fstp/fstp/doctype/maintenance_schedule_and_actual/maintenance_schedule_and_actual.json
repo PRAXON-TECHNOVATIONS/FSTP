@@ -7,9 +7,12 @@
  "engine": "InnoDB",
  "field_order": [
   "posting_date",
-  "schedule_date",
   "company",
-  "table_zres"
+  "amended_from",
+  "column_break_qmvn",
+  "schedule_date",
+  "scheduled_details_section",
+  "scheduling_table"
  ],
  "fields": [
   {
@@ -26,21 +29,42 @@
    "set_only_once": 1
   },
   {
-   "fieldname": "table_zres",
-   "fieldtype": "Table",
-   "options": "Maintenance Schedule Child"
-  },
-  {
    "default": "Today",
    "fieldname": "schedule_date",
    "fieldtype": "Date",
    "label": "Schedule Date"
+  },
+  {
+   "fieldname": "scheduling_table",
+   "fieldtype": "Table",
+   "label": "Scheduling Table",
+   "options": "Maintenance Schedule Child"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Maintenance Schedule And Actual",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_qmvn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scheduled_details_section",
+   "fieldtype": "Section Break",
+   "label": "Scheduled Details"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-05-05 12:43:01.144081",
+ "modified": "2025-05-09 15:55:42.572985",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule And Actual",
@@ -60,7 +84,6 @@
    "write": 1
   }
  ],
- "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

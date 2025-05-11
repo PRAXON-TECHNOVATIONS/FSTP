@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:HD-{##}-{phone_number}",
+ "autoname": "format:HD[{phone_number}]",
  "creation": "2025-04-17 12:11:59.834567",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -25,8 +25,8 @@
   "breadth",
   "diameter",
   "section_break_yavx",
-  "construction_date",
   "last_emptying_date",
+  "construction_date",
   "schedule_date",
   "column_break_jhqq",
   "community_septic_tank",
@@ -36,12 +36,13 @@
   {
    "fieldname": "details_of_households_for_fstp_section",
    "fieldtype": "Section Break",
-   "label": "Details of Households for FSTP"
+   "label": "Details of Households"
   },
   {
    "fieldname": "name_of_owner",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Name of Owner",
    "reqd": 1
   },
@@ -50,13 +51,15 @@
    "fieldname": "phone_number",
    "fieldtype": "Phone",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Phone Number",
    "reqd": 1
   },
   {
    "fieldname": "number_of_persons",
    "fieldtype": "Int",
-   "label": "Number of Persons"
+   "label": "Number of Persons",
+   "non_negative": 1
   },
   {
    "fieldname": "septic_tanksoak_pit",
@@ -77,18 +80,21 @@
   {
    "fieldname": "volume_of_septic_tank__soak_pit_section",
    "fieldtype": "Section Break",
-   "label": "Volume of Septic Tank / Soak Pit"
+   "label": "Measuments of Septic Tank / Soak Pit"
   },
   {
    "fieldname": "measurement_unit",
    "fieldtype": "Select",
    "label": "Measurement Unit",
-   "options": "Feet\nMeters"
+   "options": "Feet\nMeters",
+   "reqd": 1
   },
   {
    "fieldname": "height",
    "fieldtype": "Float",
-   "label": "Height"
+   "label": "Height",
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "column_break_poci",
@@ -98,27 +104,33 @@
    "depends_on": "eval: doc.is_cylinderical === 0",
    "fieldname": "length",
    "fieldtype": "Float",
-   "label": "Length"
+   "label": "Length",
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "depends_on": "eval: doc.is_cylinderical === 0",
    "fieldname": "breadth",
    "fieldtype": "Float",
-   "label": "Breadth"
+   "label": "Breadth",
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "section_break_yavx",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Maintenance Details"
   },
   {
    "fieldname": "construction_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Construction Date"
   },
   {
    "fieldname": "last_emptying_date",
    "fieldtype": "Date",
-   "label": "Last Emptying Date"
+   "label": "Last Emptying Date",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_jhqq",
@@ -131,9 +143,10 @@
    "options": "To Drain\nTo Tank"
   },
   {
+   "depends_on": "eval: doc.community_septic_tank === 1",
    "fieldname": "any_chowkland_for_community_septic_tank",
    "fieldtype": "Data",
-   "label": "Any Chowk/Land for community septic tank"
+   "label": "Any Chowk/Land for Community Septic Tank"
   },
   {
    "fieldname": "schedule_date",
@@ -147,6 +160,7 @@
    "fieldname": "community_septic_tank",
    "fieldtype": "Check",
    "label": "Community Septic Tank"
+
   },
   {
    "default": "0",
@@ -194,7 +208,6 @@
   }
  ],
  "quick_entry": 1,
- "row_format": "Dynamic",
  "search_fields": "name_of_owner, phone_number, address",
  "show_name_in_global_search": 1,
  "show_preview_popup": 1,
