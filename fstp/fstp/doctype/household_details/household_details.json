@@ -29,11 +29,7 @@
   "last_emptying_date",
   "schedule_date",
   "column_break_jhqq",
-<<<<<<< Updated upstream
-  "sullage_disposal",
-=======
   "community_septic_tank",
->>>>>>> Stashed changes
   "any_chowkland_for_community_septic_tank"
  ],
  "fields": [
@@ -129,16 +125,12 @@
    "fieldtype": "Column Break"
   },
   {
-<<<<<<< Updated upstream
    "fieldname": "sullage_disposal",
    "fieldtype": "Select",
    "label": "Sullage Disposal",
    "options": "To Drain\nTo Tank"
   },
   {
-=======
-   "depends_on": "eval: doc.community_septic_tank === 1",
->>>>>>> Stashed changes
    "fieldname": "any_chowkland_for_community_septic_tank",
    "fieldtype": "Data",
    "label": "Any Chowk/Land for community septic tank"
@@ -146,10 +138,7 @@
   {
    "fieldname": "schedule_date",
    "fieldtype": "Date",
-<<<<<<< Updated upstream
-   "label": "Schedule Date"
-=======
-   "in_standard_filter": 1,
+   "in_standard_filter":1 ,
    "label": "Schedule Date",
    "read_only": 1
   },
@@ -179,17 +168,12 @@
    "label": "Status",
    "options": "Scheduled\nOverdue",
    "reqd": 1
->>>>>>> Stashed changes
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
-<<<<<<< Updated upstream
- "modified": "2025-05-05 12:43:32.773864",
-=======
  "modified": "2025-05-11 15:28:32.799988",
->>>>>>> Stashed changes
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Household Details",
