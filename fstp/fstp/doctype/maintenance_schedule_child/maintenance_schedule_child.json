@@ -13,6 +13,7 @@
   "issue",
   "column_break_zllo",
   "status",
+  "sullage_disposal_to_draintank",
   "maintenance_type",
   "section_break_kzys",
   "phone_number",
@@ -102,6 +103,12 @@
    "fieldname": "household_details_section",
    "fieldtype": "Section Break",
    "label": "Household Details"
+  },
+  {
+   "fieldname": "sullage_disposal_to_draintank",
+   "fieldtype": "Select",
+   "label": "Sullage Disposal to Drain/Tank",
+   "options": "Nagar Palika\nPrivate Tank"
   }
  ],
  "grid_page_length": 50,

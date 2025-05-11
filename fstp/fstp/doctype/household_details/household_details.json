@@ -13,20 +13,22 @@
   "phone_number",
   "number_of_persons",
   "septic_tanksoak_pit",
+  "status",
   "column_break_wowz",
   "address",
   "volume_of_septic_tank__soak_pit_section",
+  "is_cylinderical",
   "measurement_unit",
   "height",
   "column_break_poci",
   "length",
   "breadth",
+  "diameter",
   "section_break_yavx",
   "last_emptying_date",
   "construction_date",
   "schedule_date",
   "column_break_jhqq",
-  "sullage_disposal",
   "community_septic_tank",
   "any_chowkland_for_community_septic_tank"
  ],
@@ -99,6 +101,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval: doc.is_cylinderical === 0",
    "fieldname": "length",
    "fieldtype": "Float",
    "label": "Length",
@@ -106,6 +109,7 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval: doc.is_cylinderical === 0",
    "fieldname": "breadth",
    "fieldtype": "Float",
    "label": "Breadth",
@@ -141,7 +145,7 @@
   {
    "fieldname": "schedule_date",
    "fieldtype": "Date",
-   "in_standard_filter": 1,
+   "in_standard_filter":1 ,
    "label": "Schedule Date",
    "read_only": 1
   },
@@ -163,7 +167,8 @@
    "fieldtype": "Float",
    "label": "Diameter",
    "mandatory_depends_on": "eval: doc.is_cylinderical === 1",
-   "non_negative": 1
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "status",
