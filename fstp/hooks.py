@@ -176,6 +176,13 @@ doc_events = {
 # 	],
 # }
 
+scheduler_events = {
+    "daily": [
+        "fstp.fstp.doctype.maintenance_schedule_and_actual.maintenance_schedule_and_actual.update_overdue_status"
+    ]
+}
+
+
 # Testing
 # -------
 
