@@ -13,20 +13,22 @@
   "phone_number",
   "number_of_persons",
   "septic_tanksoak_pit",
+  "status",
   "column_break_wowz",
   "address",
   "volume_of_septic_tank__soak_pit_section",
+  "is_cylinderical",
   "measurement_unit",
   "height",
   "column_break_poci",
   "length",
   "breadth",
+  "diameter",
   "section_break_yavx",
   "last_emptying_date",
   "construction_date",
   "schedule_date",
   "column_break_jhqq",
-  "sullage_disposal",
   "community_septic_tank",
   "any_chowkland_for_community_septic_tank"
  ],
@@ -99,6 +101,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval: doc.is_cylinderical === 0",
    "fieldname": "length",
    "fieldtype": "Float",
    "label": "Length",
@@ -106,6 +109,7 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval: doc.is_cylinderical === 0",
    "fieldname": "breadth",
    "fieldtype": "Float",
    "label": "Breadth",
@@ -147,7 +151,7 @@
   {
    "fieldname": "schedule_date",
    "fieldtype": "Date",
-   "in_standard_filter": 1,
+   "in_standard_filter":1 ,
    "label": "Schedule Date",
    "read_only": 1
   },
@@ -156,12 +160,34 @@
    "fieldname": "community_septic_tank",
    "fieldtype": "Check",
    "label": "Community Septic Tank"
+
+  },
+  {
+   "default": "0",
+   "fieldname": "is_cylinderical",
+   "fieldtype": "Check",
+   "label": "Is Cylinderical"
+  },
+  {
+   "depends_on": "eval: doc.is_cylinderical === 1",
+   "fieldname": "diameter",
+   "fieldtype": "Float",
+   "label": "Diameter",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nOverdue",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-10 13:50:18.013570",
+ "modified": "2025-05-11 15:28:32.799988",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Household Details",

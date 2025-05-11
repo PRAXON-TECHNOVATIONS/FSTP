@@ -12,6 +12,7 @@
   "actual_date",
   "column_break_zllo",
   "status",
+  "sullage_disposal_to_draintank",
   "maintenance_type",
   "issue",
   "section_break_kzys",
@@ -100,13 +101,19 @@
    "fieldname": "household_details_section",
    "fieldtype": "Section Break",
    "label": "Household Details"
+  },
+  {
+   "fieldname": "sullage_disposal_to_draintank",
+   "fieldtype": "Select",
+   "label": "Sullage Disposal to Drain/Tank",
+   "options": "Nagar Palika\nPrivate Tank"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-09 16:03:40.316349",
+ "modified": "2025-05-11 15:03:14.938607",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule Child",
