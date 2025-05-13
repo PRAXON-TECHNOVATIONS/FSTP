@@ -8,9 +8,9 @@
  "field_order": [
   "posting_date",
   "company",
-  "amended_from",
   "column_break_qmvn",
   "schedule_date",
+  "amended_from",
   "scheduled_details_section",
   "scheduling_table"
  ],
@@ -32,7 +32,7 @@
    "default": "Today",
    "fieldname": "schedule_date",
    "fieldtype": "Date",
-   "label": "Schedule Date"
+   "label": "Maintenance Schedule Date"
   },
   {
    "fieldname": "scheduling_table",
@@ -64,7 +64,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-09 15:55:42.572985",
+ "modified": "2025-05-13 15:57:39.878837",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule And Actual",
@@ -84,6 +84,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
