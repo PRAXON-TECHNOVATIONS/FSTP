@@ -166,6 +166,7 @@
    "fieldname": "diameter",
    "fieldtype": "Float",
    "label": "Diameter",
+   "mandatory_depends_on": "eval: doc.is_cylinderical === 1",
    "non_negative": 1,
    "reqd": 1
   },

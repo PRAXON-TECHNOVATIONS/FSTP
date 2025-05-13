@@ -10,21 +10,23 @@
   "household_name",
   "schedule_date",
   "actual_date",
+  "issue",
   "column_break_zllo",
   "status",
   "sullage_disposal_to_draintank",
   "maintenance_type",
-  "issue",
   "section_break_kzys",
   "phone_number",
   "address"
  ],
  "fields": [
   {
+   "depends_on": "eval: doc.maintenance_type === 'Schedule'",
    "fetch_from": "household_name.schedule_date",
    "fieldname": "schedule_date",
    "fieldtype": "Date",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Schedule Date",
    "mandatory_depends_on": "eval: doc.maintenance_type === 'Schedule'",
    "read_only": 1
@@ -113,7 +115,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-11 15:03:14.938607",
+ "modified": "2025-05-11 18:18:22.976025",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule Child",
