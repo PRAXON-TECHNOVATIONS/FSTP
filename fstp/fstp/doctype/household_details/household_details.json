@@ -13,7 +13,6 @@
   "phone_number",
   "number_of_persons",
   "septic_tanksoak_pit",
-  "status",
   "column_break_wowz",
   "address",
   "volume_of_septic_tank__soak_pit_section",
@@ -25,12 +24,13 @@
   "breadth",
   "diameter",
   "section_break_yavx",
-  "last_emptying_date",
-  "construction_date",
-  "schedule_date",
-  "column_break_jhqq",
+  "status",
   "community_septic_tank",
-  "any_chowkland_for_community_septic_tank"
+  "any_chowkland_for_community_septic_tank",
+  "column_break_jhqq",
+  "construction_date",
+  "last_emptying_date",
+  "schedule_date"
  ],
  "fields": [
   {
@@ -123,7 +123,7 @@
   },
   {
    "fieldname": "construction_date",
-   "fieldtype": "Date",
+   "fieldtype": "Data",
    "label": "Construction Date"
   },
   {
@@ -137,12 +137,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "sullage_disposal",
-   "fieldtype": "Select",
-   "label": "Sullage Disposal",
-   "options": "To Drain\nTo Tank"
-  },
-  {
    "depends_on": "eval: doc.community_septic_tank === 1",
    "fieldname": "any_chowkland_for_community_septic_tank",
    "fieldtype": "Data",
@@ -151,8 +145,8 @@
   {
    "fieldname": "schedule_date",
    "fieldtype": "Date",
-   "in_standard_filter":1 ,
-   "label": "Schedule Date",
+   "in_standard_filter": 1,
+   "label": "Maintenance Schedule Date",
    "read_only": 1
   },
   {
@@ -160,7 +154,6 @@
    "fieldname": "community_septic_tank",
    "fieldtype": "Check",
    "label": "Community Septic Tank"
-
   },
   {
    "default": "0",
@@ -179,7 +172,7 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
-   "label": "Status",
+   "label": "Maintenance Status",
    "options": "Scheduled\nOverdue",
    "reqd": 1
   }
@@ -187,7 +180,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-11 15:28:32.799988",
+ "modified": "2025-05-13 15:55:32.073568",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Household Details",
@@ -208,6 +201,7 @@
   }
  ],
  "quick_entry": 1,
+ "row_format": "Dynamic",
  "search_fields": "name_of_owner, phone_number, address",
  "show_name_in_global_search": 1,
  "show_preview_popup": 1,
