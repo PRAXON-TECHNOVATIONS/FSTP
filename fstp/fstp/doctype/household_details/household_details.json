@@ -13,6 +13,7 @@
   "phone_number",
   "number_of_persons",
   "septic_tanksoak_pit",
+  "status",
   "column_break_wowz",
   "address",
   "volume_of_septic_tank__soak_pit_section",
@@ -24,15 +25,14 @@
   "breadth",
   "diameter",
   "section_break_yavx",
-  "status",
+  "last_emptying_date",
+  "construction_date",
+  "schedule_date",
+  "column_break_jhqq",
   "community_septic_tank",
   "any_chowkland_for_community_septic_tank",
   "maintenance_table_tab",
-  "maintenance_log",
-  "column_break_jhqq",
-  "construction_date",
-  "last_emptying_date",
-  "schedule_date"
+  "maintenance_log"
  ],
  "fields": [
   {
