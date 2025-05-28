@@ -88,6 +88,7 @@
   {
    "fieldname": "maintenance_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Maintenance Type",
    "options": "Schedule\nBreakdown",
    "reqd": 1
@@ -115,7 +116,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-05-11 18:18:22.976025",
+ "modified": "2025-05-19 16:25:29.085509",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule Child",
