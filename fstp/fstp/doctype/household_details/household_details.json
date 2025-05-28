@@ -27,6 +27,8 @@
   "status",
   "community_septic_tank",
   "any_chowkland_for_community_septic_tank",
+  "maintenance_table_tab",
+  "maintenance_log"
   "column_break_jhqq",
   "construction_date",
   "last_emptying_date",
@@ -105,16 +107,15 @@
    "fieldname": "length",
    "fieldtype": "Float",
    "label": "Length",
-   "non_negative": 1,
-   "reqd": 1
+   "mandatory_depends_on": "eval: doc.is_cylinderical === 0",
+   "non_negative": 1
   },
   {
    "depends_on": "eval: doc.is_cylinderical === 0",
    "fieldname": "breadth",
    "fieldtype": "Float",
    "label": "Breadth",
-   "non_negative": 1,
-   "reqd": 1
+   "non_negative": 1
   },
   {
    "fieldname": "section_break_yavx",
@@ -167,8 +168,7 @@
    "fieldtype": "Float",
    "label": "Diameter",
    "mandatory_depends_on": "eval: doc.is_cylinderical === 1",
-   "non_negative": 1,
-   "reqd": 1
+   "non_negative": 1
   },
   {
    "fieldname": "status",
@@ -176,12 +176,24 @@
    "label": "Maintenance Status",
    "options": "Scheduled\nOverdue",
    "reqd": 1
+  },
+  {
+   "fieldname": "maintenance_table_tab",
+   "fieldtype": "Tab Break",
+   "label": "Maintenance Table"
+  },
+  {
+   "fieldname": "maintenance_log",
+   "fieldtype": "Table",
+   "label": "Maintenance Log",
+   "options": "Household Maintenance Log",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-13 15:55:32.073568",
+ "modified": "2025-05-24 17:07:34.439363",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Household Details",

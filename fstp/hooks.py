@@ -151,6 +151,9 @@ doctype_js = {
 doc_events = {
     "Maintenance Schedule And Actual": {
         "on_submit": "fstp.fstp.doctype.maintenance_schedule_and_actual.maintenance_schedule_and_actual.on_submit"
+    },
+    "Issue": {
+        "validate": "fstp.fstp.doctype.issue.issue.validate"
     }
 }
 
@@ -179,6 +182,7 @@ doc_events = {
 scheduler_events = {
     "daily": [
         "fstp.fstp.doctype.maintenance_schedule_and_actual.maintenance_schedule_and_actual.update_overdue_status"
+        "fstp.fstp.doctype.household_details.household_details.mark_overdue_households"
     ]
 }
 

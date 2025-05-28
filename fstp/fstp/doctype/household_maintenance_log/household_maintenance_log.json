@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-16 11:56:32.799351",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "household_details_section",
+  "household_name",
+  "schedule_date",
+  "actual_date",
+  "issue",
+  "column_break_zllo",
+  "status",
+  "sullage_disposal_to_draintank",
+  "maintenance_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "household_details_section",
+   "fieldtype": "Section Break",
+   "label": "Household Details"
+  },
+  {
+   "fieldname": "household_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Household Name",
+   "options": "Household Details",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.maintenance_type === 'Schedule'",
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Schedule Date",
+   "mandatory_depends_on": "eval: doc.maintenance_type === 'Schedule'",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval: doc.status === 'Completed'",
+   "fieldname": "actual_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Actual Date",
+   "mandatory_depends_on": "eval: doc.status === 'Completed'",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.maintenance_type=='Breakdown';",
+   "fieldname": "issue",
+   "fieldtype": "Link",
+   "label": "Issue",
+   "options": "Issue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zllo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nUnavailable\nUnwilling\nCompleted",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sullage_disposal_to_draintank",
+   "fieldtype": "Select",
+   "label": "Sullage Disposal to Drain/Tank",
+   "options": "Nagar Palika\nPrivate Tank",
+   "read_only": 1
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "Schedule\nBreakdown",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-16 12:14:33.372695",
+ "modified_by": "Administrator",
+ "module": "Fstp",
+ "name": "Household Maintenance Log",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
