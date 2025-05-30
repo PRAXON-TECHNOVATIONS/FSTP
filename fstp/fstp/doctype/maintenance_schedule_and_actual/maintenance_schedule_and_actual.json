@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "MS-MM-.####",
  "creation": "2025-04-23 16:33:11.144941",
@@ -64,7 +65,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-09 15:55:42.572985",
+ "modified": "2025-05-30 11:20:42.242698",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule And Actual",
@@ -76,11 +77,14 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
