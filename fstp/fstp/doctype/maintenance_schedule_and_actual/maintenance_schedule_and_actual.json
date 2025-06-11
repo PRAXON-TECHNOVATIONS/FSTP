@@ -12,8 +12,9 @@
   "column_break_qmvn",
   "schedule_date",
   "amended_from",
-  "scheduled_details_section",
-  "scheduling_table"
+  "first_followup_completed",
+  "section_break_pilj",
+  "table_onsc"
  ],
  "fields": [
   {
@@ -36,12 +37,6 @@
    "label": "Maintenance Schedule Date"
   },
   {
-   "fieldname": "scheduling_table",
-   "fieldtype": "Table",
-   "label": "Scheduling Table",
-   "options": "Maintenance Schedule Child"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -56,16 +51,26 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "scheduled_details_section",
-   "fieldtype": "Section Break",
-   "label": "Scheduled Details"
+   "fieldname": "section_break_pilj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_onsc",
+   "fieldtype": "Table",
+   "options": "FollowUp Table"
+  },
+  {
+   "default": "0",
+   "fieldname": "first_followup_completed",
+   "fieldtype": "Check",
+   "label": "First FollowUp Completed"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-30 11:20:42.242698",
+ "modified": "2025-06-11 17:59:54.804806",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Maintenance Schedule And Actual",

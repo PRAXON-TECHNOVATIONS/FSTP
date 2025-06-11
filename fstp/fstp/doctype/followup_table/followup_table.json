@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-11 16:57:59.087741",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "household_details_section",
+  "household",
+  "household_name",
+  "column_break_zllo",
+  "final_status",
+  "followup_first",
+  "followup_second",
+  "section_break_kzys",
+  "phone_number",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "household_details_section",
+   "fieldtype": "Section Break",
+   "label": "Household Details"
+  },
+  {
+   "fetch_from": "household.name_of_owner",
+   "fieldname": "household_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Household Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zllo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kzys",
+   "fieldtype": "Section Break",
+   "label": "Contact and Address"
+  },
+  {
+   "default": "+91-",
+   "fetch_from": "household.phone_number",
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "household_name.address",
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Address",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "issue.household",
+   "fieldname": "household",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Household ",
+   "options": "Household Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "followup_first",
+   "fieldtype": "Select",
+   "label": "FollowUp First",
+   "options": "Open\nAvailable\nUnwilling\nUnavailable"
+  },
+  {
+   "fieldname": "followup_second",
+   "fieldtype": "Select",
+   "label": "FollowUp Second",
+   "options": "Open\nAvailable\nUnwilling\nUnavailable"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "final_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Final Status",
+   "options": "Open\nUnavailable\nUnwilling\nCompleted",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-11 18:09:42.645817",
+ "modified_by": "Administrator",
+ "module": "Fstp",
+ "name": "FollowUp Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
