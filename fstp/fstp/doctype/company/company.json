@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:company",
  "creation": "2025-04-28 11:14:39.335003",
@@ -19,7 +20,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-04-28 11:28:32.249386",
+ "modified": "2025-05-30 11:22:05.114760",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "Company",
@@ -35,11 +36,11 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   }
  ],
- "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
