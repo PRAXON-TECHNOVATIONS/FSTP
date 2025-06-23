@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-20 12:17:29.825279",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "amended_from",
+  "maintenance",
+  "posting_date",
+  "column_break_dslx",
+  "maintenance_schedule_date",
+  "section_break_kthc",
+  "table_jxhb"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "final list",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "maintenance",
+   "fieldtype": "Link",
+   "label": "Maintenance Schedule and Actual",
+   "options": "Maintenance Schedule And Actual"
+  },
+  {
+   "fetch_from": "maintenance.schedule_date",
+   "fieldname": "maintenance_schedule_date",
+   "fieldtype": "Date",
+   "label": "Maintenance Schedule Date"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "section_break_kthc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_jxhb",
+   "fieldtype": "Table",
+   "options": "final list child"
+  },
+  {
+   "fieldname": "column_break_dslx",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-23 15:19:13.488531",
+ "modified_by": "Administrator",
+ "module": "Fstp",
+ "name": "final list",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
