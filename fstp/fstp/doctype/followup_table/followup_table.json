@@ -11,8 +11,11 @@
   "household_name",
   "column_break_zllo",
   "final_status",
+  "followup_details_section",
   "followup_first",
+  "remark_for_first_followup",
   "followup_second",
+  "remark_for_second_followup",
   "section_break_kzys",
   "phone_number",
   "address"
@@ -29,6 +32,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Household Name",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -51,12 +55,13 @@
    "reqd": 1
   },
   {
-   "fetch_from": "household_name.address",
+   "fetch_from": "household.address",
    "fieldname": "address",
    "fieldtype": "Small Text",
    "in_list_view": 1,
    "label": "Address",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "issue.household",
@@ -71,13 +76,13 @@
    "fieldname": "followup_first",
    "fieldtype": "Select",
    "label": "FollowUp First",
-   "options": "Open\nAvailable\nUnwilling\nUnavailable"
+   "options": "Pending\nAvailable\nUnwilling\nUnavailable"
   },
   {
    "fieldname": "followup_second",
    "fieldtype": "Select",
    "label": "FollowUp Second",
-   "options": "Open\nAvailable\nUnwilling\nUnavailable"
+   "options": "Pending\nAvailable\nUnwilling\nUnavailable"
   },
   {
    "allow_on_submit": 1,
@@ -85,15 +90,31 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Final Status",
-   "options": "Open\nUnavailable\nUnwilling\nCompleted",
-   "reqd": 1
+   "options": "\nUnavailable\nUnwilling\nAvailable"
+  },
+  {
+   "depends_on": "eval:doc.followup_first != \"Pending\" && doc.followup_first != \"Available\"\n",
+   "fieldname": "remark_for_first_followup",
+   "fieldtype": "Small Text",
+   "label": "Remark for First FollowUp"
+  },
+  {
+   "depends_on": "eval:doc.followup_second != \"Pending\" && doc.followup_second != \"Available\"\n",
+   "fieldname": "remark_for_second_followup",
+   "fieldtype": "Small Text",
+   "label": "Remark for Second FollowUp"
+  },
+  {
+   "fieldname": "followup_details_section",
+   "fieldtype": "Section Break",
+   "label": "FollowUp Details"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-06-11 18:09:42.645817",
+ "modified": "2025-06-24 17:17:35.092683",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "FollowUp Table",
