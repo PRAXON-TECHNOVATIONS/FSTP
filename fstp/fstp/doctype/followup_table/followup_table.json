@@ -79,12 +79,6 @@
    "options": "Pending\nAvailable\nUnwilling\nUnavailable"
   },
   {
-   "fieldname": "followup_second",
-   "fieldtype": "Select",
-   "label": "FollowUp Second",
-   "options": "Pending\nAvailable\nUnwilling\nUnavailable"
-  },
-  {
    "allow_on_submit": 1,
    "fieldname": "final_status",
    "fieldtype": "Select",
@@ -108,13 +102,20 @@
    "fieldname": "followup_details_section",
    "fieldtype": "Section Break",
    "label": "FollowUp Details"
+  },
+  {
+   "depends_on": "eval:parent.first_followup_completed && doc.followup_first === \"Unwilling\"\n",
+   "fieldname": "followup_second",
+   "fieldtype": "Select",
+   "label": "FollowUp Second",
+   "options": "Pending\nAvailable\nUnwilling\nUnavailable"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-06-24 17:17:35.092683",
+ "modified": "2025-06-25 12:52:44.909771",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "FollowUp Table",
