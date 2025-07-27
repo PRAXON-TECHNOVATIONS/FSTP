@@ -5,37 +5,14 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "amended_from",
-  "maintenance",
   "posting_date",
   "column_break_dslx",
-  "maintenance_schedule_date",
+  "schedule_date",
   "section_break_kthc",
-  "table_jxhb"
+  "final_table",
+  "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "final list",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
-   "fieldname": "maintenance",
-   "fieldtype": "Link",
-   "label": "Maintenance Schedule and Actual",
-   "options": "Maintenance Schedule And Actual"
-  },
-  {
-   "fetch_from": "maintenance.schedule_date",
-   "fieldname": "maintenance_schedule_date",
-   "fieldtype": "Date",
-   "label": "Maintenance Schedule Date"
-  },
   {
    "default": "Today",
    "fieldname": "posting_date",
@@ -47,23 +24,38 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "table_jxhb",
-   "fieldtype": "Table",
-   "options": "final list child"
-  },
-  {
    "fieldname": "column_break_dslx",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Final List",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "label": "Schedule Date"
+  },
+  {
+   "fieldname": "final_table",
+   "fieldtype": "Table",
+   "options": "Final List Table"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-06-23 15:19:13.488531",
+ "modified": "2025-07-27 20:21:29.857188",
  "modified_by": "Administrator",
  "module": "Fstp",
- "name": "final list",
+ "name": "Final List",
  "owner": "Administrator",
  "permissions": [
   {

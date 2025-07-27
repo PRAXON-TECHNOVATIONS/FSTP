@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class finallist(Document):
+class FinalList(Document):
 	pass

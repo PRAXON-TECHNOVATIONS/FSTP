@@ -1,37 +1,25 @@
 // Copyright (c) 2025, Kapil and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on("Issue", {
-// 	refresh(frm) {
-
-// 	},
-// });
 frappe.ui.form.on('Issue', {
-    refresh: function (frm) {
-        if (!frm.is_new() && frm.doc.status === "Open") {
-            frm.add_custom_button('Add to Schedule', () => {
+    refresh: function(frm) {
+        if (frm.doc.status === 'Open') {
+            frm.add_custom_button(__('Add to Final List'), function() {
+                if (!frm.doc.household) {
+                    frappe.msgprint(__('Please provide a household.'));
+                    return;
+                }
                 frappe.call({
-                    method: "fstp.fstp.doctype.issue.issue.add_to_latest_schedule",
+                    method: 'fstp.fstp.doctype.issue.issue.add_to_final_list',
                     args: {
-                        issue_date: frm.doc.creation,
-                        household: frm.doc.household,
-                        issue_name: frm.doc.name
+                        issue_name: frm.doc.name,
+                        household: frm.doc.household
                     },
-                    callback: function (r) {
-                        if (r.message) {
-                            frappe.msgprint({
-                                title:("Scheduled"),
-                                message: `Issue has been scheduled in <b>${r.message.schedule_name}</b> on <b>${r.message.schedule_date}</b>.`,
-                                indicator: 'green'
-                            });
-                            frm.reload_doc();
-                        } else {
-                            frappe.msgprint({
-                                title:("Not Found"),
-                                message: "No draft maintenance schedule found.",
-                                indicator: 'orange'
-                            });
-                        }
+                    callback: function(response) {
+                        frappe.msgprint(response.message);
+                    },
+                    error: function(err) {
+                        frappe.msgprint(__('Error while adding to Final List.'));
                     }
                 });
             });
