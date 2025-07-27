@@ -10,6 +10,7 @@
   "maintenance_details_section",
   "posting_date",
   "first_followup_completed",
+  "custom_final_list_created",
   "column_break_qmvn",
   "schedule_date",
   "amended_from",
@@ -74,13 +75,21 @@
    "fieldtype": "Table",
    "label": "FollowUp Table",
    "options": "FollowUp Table"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "custom_final_list_created",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Final List Created"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-27 14:50:55.381383",
+ "modified": "2025-07-27 20:41:17.612087",
  "modified_by": "Administrator",
  "module": "Fstp",
  "name": "FollowUp List",
